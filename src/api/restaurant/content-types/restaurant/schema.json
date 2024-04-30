@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "singularName": "restaurant",
+    "pluralName": "restaurants",
+    "displayName": "restaurant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "one8": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 10,
+      "minLength": 2
+    },
+    "whereyoucantastethebest": {
+      "type": "blocks"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "restaurants"
+    }
+  }
+}
